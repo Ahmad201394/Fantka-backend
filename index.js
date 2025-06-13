@@ -95,7 +95,7 @@ app.use(
 );
 
 app.use("/static", express.static("public"));
-
+console.log('MONGO_URI:', process.env.MONGO_URI);
 const uri = process.env.MONGO_URI;
 mongoose.connect(uri, {
   useNewUrlParser: true,
